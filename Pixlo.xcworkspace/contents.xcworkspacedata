@@ -7,4 +7,7 @@
    <FileRef
       location = "group:Packages/PixloCapture">
    </FileRef>
+   <FileRef
+      location = "group:Packages/PixloShared">
+   </FileRef>
 </Workspace>

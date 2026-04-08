@@ -100,6 +100,6 @@ These are not on the roadmap at any phase:
 
 ## Current Phase
 
-**Phase 1 — Capture** (complete after P02)
+**Phase 2 — Virtual Camera Extension** (skeleton complete after P04)
 
-Next: **P04 — Virtual Camera Extension**: Camera Extension with IOSurface passthrough. Requires signed build. See `reports/2026-04-08_P03_extension-boundary-review.md` for decisions and scope.
+Next: **P05 — Live Passthrough**: Wire IOSurface transport so the host writes physical camera frames to a shared IOSurface and the extension reads and emits them. Requires provisioning profile with App Group `group.vc.pixlo.app` and system extension entitlements activated in the Apple Developer portal. See `reports/2026-04-08_P04_extension-skeleton-report.md` for manual activation steps.

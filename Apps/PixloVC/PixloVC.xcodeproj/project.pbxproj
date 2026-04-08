@@ -11,7 +11,38 @@
 		89E02746B68A41CEAEA87398 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9FD640E2A4DB585E34CA2 /* ContentView.swift */; };
 		B619C1E5A550415DB7E61D92 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1C9735EED4857A7BFB34C /* CameraPreviewView.swift */; };
 		7A6952672E77407A84AC8E02 /* PixloCapture in Frameworks */ = {isa = PBXBuildFile; productRef = 1FA262AEDBB5498797BAFB2C /* PixloCapture */; };
+		E5000003AA2200003300000F /* ExtensionInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5000001AA2200003300000F /* ExtensionInstaller.swift */; };
+		E1000004AA2200003300000F /* PixloShared in Frameworks */ = {isa = PBXBuildFile; productRef = E1000002AA2200003300000F /* PixloShared */; };
+		E5000005AA2200003300000F /* PixloVCExtension.systemextension in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2000008AA2200003300000F /* PixloVCExtension.systemextension */; settings = {ATTRIBUTES = (); }; };
+		E4000001AA2200003300000F /* PixloVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3000001AA2200003300000F /* PixloVCExtension.swift */; };
+		E4000002AA2200003300000F /* VirtualCameraProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3000002AA2200003300000F /* VirtualCameraProvider.swift */; };
+		E4000003AA2200003300000F /* VirtualCameraDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3000003AA2200003300000F /* VirtualCameraDevice.swift */; };
+		E4000004AA2200003300000F /* VirtualCameraStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3000004AA2200003300000F /* VirtualCameraStream.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6000002AA2200003300000F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A027F8EE73294B03AE5E79F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2000001AA2200003300000F;
+			remoteInfo = PixloVCExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E5000004AA2200003300000F /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "Contents/Library/SystemExtensions";
+			dstSubfolderSpec = 1;
+			files = (
+				E5000005AA2200003300000F /* PixloVCExtension.systemextension in CopyFiles */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5191F7351EDA4CB9A1DBE9D4 /* PixloVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixloVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +50,15 @@
 		6CE9FD640E2A4DB585E34CA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D4E1C9735EED4857A7BFB34C /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		ACD6390AE49A42219DAD26EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5000001AA2200003300000F /* ExtensionInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionInstaller.swift; sourceTree = "<group>"; };
+		E5000002AA2200003300000F /* PixloVC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PixloVC.entitlements; sourceTree = "<group>"; };
+		E2000008AA2200003300000F /* PixloVCExtension.systemextension */ = {isa = PBXFileReference; explicitFileType = wrapper.system-extension; includeInIndex = 0; path = PixloVCExtension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3000001AA2200003300000F /* PixloVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PixloVCExtension.swift; path = ../PixloVCExtension/PixloVCExtension.swift; sourceTree = SOURCE_ROOT; };
+		E3000002AA2200003300000F /* VirtualCameraProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VirtualCameraProvider.swift; path = ../PixloVCExtension/VirtualCameraProvider.swift; sourceTree = SOURCE_ROOT; };
+		E3000003AA2200003300000F /* VirtualCameraDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VirtualCameraDevice.swift; path = ../PixloVCExtension/VirtualCameraDevice.swift; sourceTree = SOURCE_ROOT; };
+		E3000004AA2200003300000F /* VirtualCameraStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VirtualCameraStream.swift; path = ../PixloVCExtension/VirtualCameraStream.swift; sourceTree = SOURCE_ROOT; };
+		E3000005AA2200003300000F /* Info.plist (Extension) */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = ../PixloVCExtension/Info.plist; sourceTree = SOURCE_ROOT; };
+		E3000006AA2200003300000F /* PixloVCExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = PixloVCExtension.entitlements; path = ../PixloVCExtension/PixloVCExtension.entitlements; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +67,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A6952672E77407A84AC8E02 /* PixloCapture in Frameworks */,
+				E1000004AA2200003300000F /* PixloShared in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2000003AA2200003300000F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				2A0B2526B14E4A598DEBE454 /* PixloVC */,
+				E2000007AA2200003300000F /* PixloVCExtension */,
 				CABB9CAA1A0447ECADF37DE0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,15 +96,32 @@
 				FF03958B27AB405A8FEE6A3B /* PixloVCApp.swift */,
 				6CE9FD640E2A4DB585E34CA2 /* ContentView.swift */,
 				D4E1C9735EED4857A7BFB34C /* CameraPreviewView.swift */,
+				E5000001AA2200003300000F /* ExtensionInstaller.swift */,
 				ACD6390AE49A42219DAD26EC /* Info.plist */,
+				E5000002AA2200003300000F /* PixloVC.entitlements */,
 			);
 			path = PixloVC;
 			sourceTree = "<group>";
+		};
+		E2000007AA2200003300000F /* PixloVCExtension */ = {
+			isa = PBXGroup;
+			children = (
+				E3000001AA2200003300000F /* PixloVCExtension.swift */,
+				E3000002AA2200003300000F /* VirtualCameraProvider.swift */,
+				E3000003AA2200003300000F /* VirtualCameraDevice.swift */,
+				E3000004AA2200003300000F /* VirtualCameraStream.swift */,
+				E3000005AA2200003300000F /* Info.plist */,
+				E3000006AA2200003300000F /* PixloVCExtension.entitlements */,
+			);
+			name = PixloVCExtension;
+			path = "../PixloVCExtension";
+			sourceTree = SOURCE_ROOT;
 		};
 		CABB9CAA1A0447ECADF37DE0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				5191F7351EDA4CB9A1DBE9D4 /* PixloVC.app */,
+				E2000008AA2200003300000F /* PixloVCExtension.systemextension */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,18 +136,39 @@
 				090EFABE9CDF418A95BC2711 /* Sources */,
 				490581ED985B420E93091E03 /* Frameworks */,
 				BB5F642E4F3143C8A8305461 /* Resources */,
+				E5000004AA2200003300000F /* Embed System Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6000001AA2200003300000F /* PBXTargetDependency */,
+			);
+			name = PixloVC;
+			packageProductDependencies = (
+				1FA262AEDBB5498797BAFB2C /* PixloCapture */,
+				E1000002AA2200003300000F /* PixloShared */,
+			);
+			productName = PixloVC;
+			productReference = 5191F7351EDA4CB9A1DBE9D4 /* PixloVC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2000001AA2200003300000F /* PixloVCExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2000006AA2200003300000F /* Build configuration list for PBXNativeTarget "PixloVCExtension" */;
+			buildPhases = (
+				E2000002AA2200003300000F /* Sources */,
+				E2000003AA2200003300000F /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PixloVC;
+			name = PixloVCExtension;
 			packageProductDependencies = (
-				1FA262AEDBB5498797BAFB2C /* PixloCapture */,
 			);
-			productName = PixloVC;
-			productReference = 5191F7351EDA4CB9A1DBE9D4 /* PixloVC.app */;
-			productType = "com.apple.product-type.application";
+			productName = PixloVCExtension;
+			productReference = E2000008AA2200003300000F /* PixloVCExtension.systemextension */;
+			productType = "com.apple.product-type.system-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +183,9 @@
 					D3938E13D31A4E6AACDD0548 = {
 						CreatedOnToolsVersion = 16.0;
 					};
+					E2000001AA2200003300000F = {
+						CreatedOnToolsVersion = 16.0;
+					};
 				};
 			};
 			buildConfigurationList = 7D76D3EF4D0E4683B0DA438E /* Build configuration list for PBXProject "PixloVC" */;
@@ -108,6 +198,7 @@
 			);
 			localPackages = (
 				2A2EFB3F60784605A172E7FC /* XCLocalSwiftPackageReference "../../Packages/PixloCapture" */,
+				E1000001AA2200003300000F /* XCLocalSwiftPackageReference "../../Packages/PixloShared" */,
 			);
 			mainGroup = 3005211318854B4FB8DFB2D2;
 			packageReferences = (
@@ -116,6 +207,7 @@
 			projectRoot = "";
 			targets = (
 				D3938E13D31A4E6AACDD0548 /* PixloVC */,
+				E2000001AA2200003300000F /* PixloVCExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -138,10 +230,30 @@
 				A02451AAE58D424BB6BF1320 /* PixloVCApp.swift in Sources */,
 				89E02746B68A41CEAEA87398 /* ContentView.swift in Sources */,
 				B619C1E5A550415DB7E61D92 /* CameraPreviewView.swift in Sources */,
+				E5000003AA2200003300000F /* ExtensionInstaller.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2000002AA2200003300000F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4000001AA2200003300000F /* PixloVCExtension.swift in Sources */,
+				E4000002AA2200003300000F /* VirtualCameraProvider.swift in Sources */,
+				E4000003AA2200003300000F /* VirtualCameraDevice.swift in Sources */,
+				E4000004AA2200003300000F /* VirtualCameraStream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6000001AA2200003300000F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2000001AA2200003300000F /* PixloVCExtension */;
+			targetProxy = E6000002AA2200003300000F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		196B60A4B4374216AB85CFA8 /* Debug */ = {
@@ -253,10 +365,12 @@
 		5FD105B16D8840EB9C789BFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PixloVC/PixloVC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P4KPQ56YNX;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PixloVC/Info.plist;
@@ -275,10 +389,12 @@
 		C135FE72FE7C4B829DD7686C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PixloVC/PixloVC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P4KPQ56YNX;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PixloVC/Info.plist;
@@ -291,6 +407,49 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E2000004AA2200003300000F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "../PixloVCExtension/PixloVCExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4KPQ56YNX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "../PixloVCExtension/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vc.pixlo.PixloVC.Extension;
+				PRODUCT_NAME = PixloVCExtension;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = systemextension;
+			};
+			name = Debug;
+		};
+		E2000005AA2200003300000F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "../PixloVCExtension/PixloVCExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4KPQ56YNX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "../PixloVCExtension/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vc.pixlo.PixloVC.Extension;
+				PRODUCT_NAME = PixloVCExtension;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = systemextension;
 			};
 			name = Release;
 		};
@@ -315,12 +474,25 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		E2000006AA2200003300000F /* Build configuration list for PBXNativeTarget "PixloVCExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2000004AA2200003300000F /* Debug */,
+				E2000005AA2200003300000F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
 		2A2EFB3F60784605A172E7FC /* XCLocalSwiftPackageReference "../../Packages/PixloCapture" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../Packages/PixloCapture;
+		};
+		E1000001AA2200003300000F /* XCLocalSwiftPackageReference "../../Packages/PixloShared" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../Packages/PixloShared;
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -329,6 +501,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2A2EFB3F60784605A172E7FC /* XCLocalSwiftPackageReference "../../Packages/PixloCapture" */;
 			productName = PixloCapture;
+		};
+		E1000002AA2200003300000F /* PixloShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1000001AA2200003300000F /* XCLocalSwiftPackageReference "../../Packages/PixloShared" */;
+			productName = PixloShared;
 		};
 /* End XCSwiftPackageProductDependency section */
 
