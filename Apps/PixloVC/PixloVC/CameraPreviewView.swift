@@ -12,7 +12,9 @@ struct CameraPreviewView: NSViewRepresentable {
         return view
     }
 
-    func updateNSView(_ nsView: PreviewNSView, context: Context) {}
+    func updateNSView(_ nsView: PreviewNSView, context: Context) {
+        nsView.session = session
+    }
 }
 
 // MARK: -

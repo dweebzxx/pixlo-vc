@@ -17,10 +17,15 @@ public final class CaptureManager: NSObject {
 
     private let session = AVCaptureSession()
     private let videoOutput = AVCaptureVideoDataOutput()
+    private let sessionQueue = DispatchQueue(
+        label: "vc.pixlo.capture.session",
+        qos: .userInitiated
+    )
     private let outputQueue = DispatchQueue(
         label: "vc.pixlo.capture.output",
         qos: .userInteractive
     )
+    private var isConfigured = false
 
     public override init() {
         super.init()
@@ -31,6 +36,8 @@ public final class CaptureManager: NSObject {
     /// Configures the session with the given `AVCaptureDevice`.
     /// Call once before `start()`. Throws `CaptureError` on failure.
     public func configure(device: AVCaptureDevice) throws {
+        guard !isConfigured else { return }
+
         session.beginConfiguration()
         defer { session.commitConfiguration() }
 
@@ -52,22 +59,25 @@ public final class CaptureManager: NSObject {
             throw CaptureError.cannotAddOutput
         }
         session.addOutput(videoOutput)
+        isConfigured = true
     }
 
     // MARK: - Lifecycle
 
     /// Starts the capture session on a background thread.
     public func start() {
-        guard !session.isRunning else { return }
-        DispatchQueue.global(qos: .userInteractive).async {
+        sessionQueue.async {
+            guard !self.session.isRunning else { return }
             self.session.startRunning()
         }
     }
 
     /// Stops the capture session.
     public func stop() {
-        guard session.isRunning else { return }
-        session.stopRunning()
+        sessionQueue.async {
+            guard self.session.isRunning else { return }
+            self.session.stopRunning()
+        }
     }
 }
 
@@ -87,8 +97,19 @@ extension CaptureManager: AVCaptureVideoDataOutputSampleBufferDelegate {
 
 // MARK: - Errors
 
-public enum CaptureError: Error {
+public enum CaptureError: LocalizedError {
     case cannotAddInput
     case cannotAddOutput
     case noDefaultCamera
+
+    public var errorDescription: String? {
+        switch self {
+        case .cannotAddInput:
+            return "Unable to add the selected camera as a capture input."
+        case .cannotAddOutput:
+            return "Unable to configure the capture output for camera frames."
+        case .noDefaultCamera:
+            return "No usable camera is available."
+        }
+    }
 }

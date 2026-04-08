@@ -27,6 +27,7 @@ struct ContentView: View {
         }
         .frame(width: 640, height: 480)
         .task { await viewModel.start() }
+        .onDisappear { viewModel.stop() }
     }
 }
 
@@ -46,8 +47,12 @@ final class CaptureViewModel: ObservableObject {
     @Published var state: State = .waitingForPermission
 
     private let captureManager = CaptureManager()
+    private var hasStarted = false
 
     func start() async {
+        guard !hasStarted else { return }
+        hasStarted = true
+
         let granted = await CapturePermission.requestCameraAccess()
         guard granted else {
             state = .permissionDenied
@@ -66,5 +71,9 @@ final class CaptureViewModel: ObservableObject {
         } catch {
             state = .error(error.localizedDescription)
         }
+    }
+
+    func stop() {
+        captureManager.stop()
     }
 }
