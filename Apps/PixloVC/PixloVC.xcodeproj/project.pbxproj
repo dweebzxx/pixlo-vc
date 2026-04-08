@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A02451AAE58D424BB6BF1320 /* PixloVCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF03958B27AB405A8FEE6A3B /* PixloVCApp.swift */; };
+		89E02746B68A41CEAEA87398 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9FD640E2A4DB585E34CA2 /* ContentView.swift */; };
+		B619C1E5A550415DB7E61D92 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1C9735EED4857A7BFB34C /* CameraPreviewView.swift */; };
+		7A6952672E77407A84AC8E02 /* PixloCapture in Frameworks */ = {isa = PBXBuildFile; productRef = 1FA262AEDBB5498797BAFB2C /* PixloCapture */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5191F7351EDA4CB9A1DBE9D4 /* PixloVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixloVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF03958B27AB405A8FEE6A3B /* PixloVCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixloVCApp.swift; sourceTree = "<group>"; };
+		6CE9FD640E2A4DB585E34CA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D4E1C9735EED4857A7BFB34C /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		ACD6390AE49A42219DAD26EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		490581ED985B420E93091E03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A6952672E77407A84AC8E02 /* PixloCapture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3005211318854B4FB8DFB2D2 = {
+			isa = PBXGroup;
+			children = (
+				2A0B2526B14E4A598DEBE454 /* PixloVC */,
+				CABB9CAA1A0447ECADF37DE0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A0B2526B14E4A598DEBE454 /* PixloVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF03958B27AB405A8FEE6A3B /* PixloVCApp.swift */,
+				6CE9FD640E2A4DB585E34CA2 /* ContentView.swift */,
+				D4E1C9735EED4857A7BFB34C /* CameraPreviewView.swift */,
+				ACD6390AE49A42219DAD26EC /* Info.plist */,
+			);
+			path = PixloVC;
+			sourceTree = "<group>";
+		};
+		CABB9CAA1A0447ECADF37DE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5191F7351EDA4CB9A1DBE9D4 /* PixloVC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3938E13D31A4E6AACDD0548 /* PixloVC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5F73E68347B4D6BAC3D986B /* Build configuration list for PBXNativeTarget "PixloVC" */;
+			buildPhases = (
+				090EFABE9CDF418A95BC2711 /* Sources */,
+				490581ED985B420E93091E03 /* Frameworks */,
+				BB5F642E4F3143C8A8305461 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PixloVC;
+			packageProductDependencies = (
+				1FA262AEDBB5498797BAFB2C /* PixloCapture */,
+			);
+			productName = PixloVC;
+			productReference = 5191F7351EDA4CB9A1DBE9D4 /* PixloVC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A027F8EE73294B03AE5E79F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					D3938E13D31A4E6AACDD0548 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 7D76D3EF4D0E4683B0DA438E /* Build configuration list for PBXProject "PixloVC" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			localPackages = (
+				2A2EFB3F60784605A172E7FC /* XCLocalSwiftPackageReference "../../Packages/PixloCapture" */,
+			);
+			mainGroup = 3005211318854B4FB8DFB2D2;
+			packageReferences = (
+			);
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3938E13D31A4E6AACDD0548 /* PixloVC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB5F642E4F3143C8A8305461 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		090EFABE9CDF418A95BC2711 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02451AAE58D424BB6BF1320 /* PixloVCApp.swift in Sources */,
+				89E02746B68A41CEAEA87398 /* ContentView.swift in Sources */,
+				B619C1E5A550415DB7E61D92 /* CameraPreviewView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		196B60A4B4374216AB85CFA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLES = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A94BEB4E674341C9B0788CCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLES = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		5FD105B16D8840EB9C789BFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PixloVC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vc.pixlo.PixloVC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C135FE72FE7C4B829DD7686C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PixloVC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vc.pixlo.PixloVC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D76D3EF4D0E4683B0DA438E /* Build configuration list for PBXProject "PixloVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				196B60A4B4374216AB85CFA8 /* Debug */,
+				A94BEB4E674341C9B0788CCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5F73E68347B4D6BAC3D986B /* Build configuration list for PBXNativeTarget "PixloVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FD105B16D8840EB9C789BFE /* Debug */,
+				C135FE72FE7C4B829DD7686C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		2A2EFB3F60784605A172E7FC /* XCLocalSwiftPackageReference "../../Packages/PixloCapture" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../Packages/PixloCapture;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1FA262AEDBB5498797BAFB2C /* PixloCapture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A2EFB3F60784605A172E7FC /* XCLocalSwiftPackageReference "../../Packages/PixloCapture" */;
+			productName = PixloCapture;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+	};
+	rootObject = A027F8EE73294B03AE5E79F9 /* Project object */;
+}
