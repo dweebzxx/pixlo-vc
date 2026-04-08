@@ -56,5 +56,5 @@ warn "App Group entitlement requires a provisioning profile; configure manually 
 
 echo ""
 echo "Bootstrap check complete."
-echo "Next step: open Pixlo.xcworkspace in Xcode (not yet created — see Phase 1)."
+echo "Next step: open Pixlo.xcworkspace in Xcode."
 echo ""
