@@ -32,9 +32,9 @@ Scripts/       Dev tooling and bootstrap helpers
 2. **Bootstrap**: Run `Scripts/bootstrap.sh` to verify your environment (stub — see script for details).
 3. Open the workspace once it exists: `open Pixlo.xcworkspace`.
 
-## Contributing
+## AI-Assisted Development
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+This project is built using a numbered prompt chain (P00, P01, …). `CLAUDE.md` at the repo root is the operating guide for all AI-assisted sessions — it defines scope, architecture constraints, and working rules.
 
 ## License
 

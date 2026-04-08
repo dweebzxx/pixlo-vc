@@ -66,7 +66,7 @@ Pixlo VC presents a virtual camera device to macOS so that any video-conferencin
   - Wrap `AVCaptureSession` and `AVCaptureVideoDataOutput`
   - Emit `CVPixelBuffer` frames to consumers
   - Handle permission requests
-- **Open decision**: whether to support multiple simultaneous physical cameras.
+- **v1 constraint**: one physical camera at a time. Multiple simultaneous physical cameras are out of scope for v1.
 
 ### Render Pipeline (`Packages/PixloRender`)
 
