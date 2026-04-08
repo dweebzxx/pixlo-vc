@@ -39,7 +39,7 @@ PixloCapture  (Packages/PixloCapture)
 PixloRender   (Packages/PixloRender) ◄── CameraSettings (PixloShared)
     │  CVPixelBuffer (processed)
     ▼
-IPC / IOSurface / XPC  (mechanism TBD in Phase 2)
+IOSurface  (shared memory, latest-frame-wins)
     │
     ▼
 Camera Extension (CMIOExtensionProvider) → CMIOStream → video app
@@ -66,6 +66,7 @@ Camera Extension (CMIOExtensionProvider) → CMIOStream → video app
 - **Prefer readable over clever.** If a simpler implementation exists, use it.
 - **Keep files small.** If a file exceeds ~200 lines, consider decomposition.
 - **No recording, streaming, or browser source code.** Reject any generated code that drifts toward these.
+- **Camera Extension requires signing.** Extension milestones cannot be validated unsigned. Do not attempt to build/test the extension with `CODE_SIGNING_ALLOWED=NO`.
 
 ---
 
@@ -99,6 +100,6 @@ These are not on the roadmap at any phase:
 
 ## Current Phase
 
-**Phase 0 — Skeleton** (complete after P00A)
+**Phase 1 — Capture** (complete after P02)
 
-Next: **P01 — Capture**: physical camera capture, preview in host app, `PixloCapture` package skeleton.
+Next: **P04 — Virtual Camera Extension**: Camera Extension with IOSurface passthrough. Requires signed build. See `reports/2026-04-08_P03_extension-boundary-review.md` for decisions and scope.

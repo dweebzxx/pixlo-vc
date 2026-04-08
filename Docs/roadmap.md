@@ -116,10 +116,13 @@
 
 ---
 
+## Resolved Decisions
+
+1. **IPC mechanism (P03):** `IOSurface` shared memory, latest-frame-wins. No XPC for frame data.
+2. **Minimum macOS version (P03):** 14.0 (Sonoma).
+3. **App Group ID (P03):** `group.vc.pixlo.app` (placeholder until team ID confirmed).
+
 ## Open Decisions
 
-1. **IPC mechanism** (Phase 2) — XPC service vs. `IOSurface` + shared memory. Affects latency and code complexity.
-2. **Render tech** (Phase 3) — Metal compute vs. Core Image. Affects filter expressiveness and performance floor.
-3. **Minimum macOS version** — 14.0 (Sonoma) vs. 15.0 (Sequoia). The CoreMediaIO Camera Extension API is available from macOS 12.3, but a higher minimum (14+) is documented here to allow use of Swift structured concurrency and SwiftUI features that require Sonoma; the final floor will be confirmed in Phase 1.
-4. **App Group ID** — needs team ID; placeholder until signing is configured.
-5. **Distribution** — direct (no sandboxing restriction) vs. Mac App Store (full sandbox, complicates System Extension).
+1. **Render tech** (Phase 3) — Metal compute vs. Core Image. Affects filter expressiveness and performance floor.
+2. **Distribution** — direct (no sandboxing restriction) vs. Mac App Store (full sandbox, complicates System Extension).

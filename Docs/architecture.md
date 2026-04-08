@@ -53,8 +53,8 @@ Pixlo VC presents a virtual camera device to macOS so that any video-conferencin
 - **Technology**: System Extension, CoreMediaIO Camera Extension API (`CMIOExtensionProvider` / `CMIOExtensionDevice` — available macOS 12.3+)
 - **Responsibilities**:
   - Register as a virtual CMIODevice
-  - Receive processed pixel buffers from the host (via IPC / shared memory — decision pending)
-  - Enqueue frames into the CMIOStream
+  - Read latest frame from shared `IOSurface` (written by host app)
+  - Enqueue frames into the CMIOStream on a timer
 - **Key files** (to be created):
   - `main.swift` — extension entry point
   - `VirtualCameraProvider.swift` — `CMIOExtensionProvider` subclass
@@ -99,11 +99,22 @@ Capture Pipeline
 Render Pipeline  ◄── CameraSettings (via PixloShared)
     │  CVPixelBuffer (processed)
     ▼
-IPC / Shared Memory  (mechanism TBD)
+IOSurface (shared memory, latest-frame-wins)
     │
     ▼
 Camera Extension  →  CMIOStream  →  Video app
 ```
+
+---
+
+## Build & Signing Requirements
+
+- Camera Extension requires code signing (Apple Development or Developer ID).
+- Host app needs `com.apple.developer.system-extension.install` entitlement.
+- Both host app and extension need `com.apple.security.application-groups` with the shared App Group ID.
+- Extension `.appex` embedded at `Contents/Library/SystemExtensions/` in host app bundle.
+- Hardened Runtime enabled (required for notarization in Phase 5).
+- Host app is **not sandboxed** (simplifies System Extension installation).
 
 ---
 
@@ -120,10 +131,14 @@ Camera Extension  →  CMIOStream  →  Video app
 
 ---
 
+## Resolved Decisions
+
+1. **IPC mechanism (P03):** `IOSurface` shared memory. Host writes frames to a shared IOSurface; extension reads on a timer. Latest-frame-wins — no queue, no ring buffer. IOSurfaceID passed via App Group UserDefaults.
+2. **Minimum macOS version (P03):** 14.0 (Sonoma). CMIOExtensionProvider available since 12.3; 14.0 required for Swift concurrency and SwiftUI features.
+3. **App Group ID (P03):** `group.vc.pixlo.app` (placeholder — update when team ID is confirmed).
+4. **Extension bundle ID (P03):** `vc.pixlo.PixloVC.Extension`.
+
 ## Open Decisions
 
-1. IPC mechanism between host app and extension (XPC vs. shared memory via `IOSurface`).
-2. Metal pipeline vs. Core Image for render transforms.
-3. App Group identifier — depends on team ID and provisioning.
-4. Minimum macOS version (14.0 Sonoma or 15.0 Sequoia).
-5. Distribution channel: direct download vs. Mac App Store (affects entitlements).
+1. Metal pipeline vs. Core Image for render transforms (Phase 3).
+2. Distribution channel: direct download vs. Mac App Store (affects entitlements; Phase 5).
